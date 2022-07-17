@@ -2,17 +2,16 @@
 just the website title. */
 import React from "react";
 
-export default class NavBar extends React.Component {
+export default class Navbar extends React.Component {
     render() { 
         return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">    
-           <a class="navbar-brand" href="index.html">Classic Film Reviews</a>           
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>                                    
-        </nav>
-        
+        <div className="container">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark nav justify-content-center">    
+                <a className="navbar-brand"><img className="filmReel" 
+                src="./images/film-reel-g158e39521_1280.png" alt="film reel"/>&nbsp; &nbsp;Classic Film Reviews</a>&nbsp;&nbsp;<img className="filmReel" 
+                src="./images/film-reel-g158e39521_1280.png" alt="film reel"/>                         
+            </nav>
+        </div> //closing container div        
         ); //closing return parentheses
     } // closing render braces
 } // closing export braces

@@ -9,7 +9,7 @@ import MovieList from './components/movie-list';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   /*<React.StrictMode>*/
-    <MovieList />
+    <MovieList /> /*all components open in MovieList */
   /*</React.StrictMode>*/
 );
 

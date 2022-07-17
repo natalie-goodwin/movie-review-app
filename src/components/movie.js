@@ -1,6 +1,11 @@
 /* holds images, synopsis, title, rating, stars*/
 import React from "react";
 
-export class Movies extends React.Component {
-    
+export default class Movies extends React.Component {
+    render() {
+       
+    }
+
 }
+
+/* need JS and HTML for movies*/
