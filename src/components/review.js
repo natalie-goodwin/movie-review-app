@@ -1,21 +1,32 @@
 import React from "react";
-import ReviewForm from "./review-form";
 
 export default class Review extends React.Component {
+    constructor(props) { /*this is a place to hold the reviews of each film; props pass into superprops */
+        super(props);
+        this.state = {
+            reviews: props.reviews
+        } 
+    }
+
     render() {
-        return (
-            <div class="card">
-                <div class="card-header">
+        let reviewsArray;
+        if (this.state.reviews) {
+            reviewsArray = this.state.reviews.map( (review, index) => 
+            <li className="list-group-item" key={index}>{review}</li>
+            ) /*this will build an array of reviews and list the reviews as they appear */ 
+        }
+        return (/*creates a card div where the user reviews will appear and returns the reviews array */
+          <div className="card"> 
+                <div className="card-header">
                    <h5> Reviews</h5>
                 </div>
-                
-                <div class="card-body">                    
-                    <p class="card-text"></p>                     
+                {reviewsArray} 
+                <div className="card-body">                    
+                    <p className="card-text"></p>                     
                 </div> 
-            </div> //closing card div
-        ) //closing return parentheses
-    } //closing render brackets
-} //closing export bracket
+            </div>         
+        ); 
+    }
+}
+            
 
-/*This Review component is where the review and reviewer stars will be appear after users submit their reviews. Everything 
-will appear inside the card-body div.*/
